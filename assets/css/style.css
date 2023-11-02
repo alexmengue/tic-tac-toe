@@ -35,4 +35,19 @@ html {
     width: 22vmin;
     border: none;
     border-radius: 8px;
+    font-size: 12vmin;
+    color: #D161FF;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+#restart {
+    font-size: 1.3em;
+    padding: 1em;
+    border-radius: 8px;
+    background-color: #0A0027;
+    color: #FFFFFF;
+    border: none;
+    position: relative;
+    margin: 1.5em auto 0 auto;
+    display: block;
 }
