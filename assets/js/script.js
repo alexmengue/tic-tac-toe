@@ -14,3 +14,20 @@ let winningPattern = [
     [0, 4, 8],
     [2, 4, 6]
 ];
+
+let xTurn = true;
+let count = 0;
+
+btnRef.forEach((element) => {
+    element.addEventListener('click', () => {
+        if (xTurn) {
+            xTurn = false;
+            element.innerText = 'X';
+            element.disabled = true;
+        } else {
+            xTurn = true;
+            element.innerText = 'O';
+            element.disabled = true;
+        }
+    });
+});
