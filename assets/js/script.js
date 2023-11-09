@@ -18,6 +18,10 @@ let winningPattern = [
 let xTurn = true;
 let count = 0;
 
+const winChecker = () => {
+    //check if there is a winner
+};
+
 btnRef.forEach((element) => {
     element.addEventListener('click', () => {
         if (xTurn) {
@@ -29,5 +33,13 @@ btnRef.forEach((element) => {
             element.innerText = 'O';
             element.disabled = true;
         }
+
+        count++;
+
+        if (count === 9) {
+            //its a draw
+        }
+
+        winChecker();
     });
 });
