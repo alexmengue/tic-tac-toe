@@ -18,8 +18,30 @@ let winningPattern = [
 let xTurn = true;
 let count = 0;
 
+const disableButtons = () => {
+    btnRef.forEach((element) => (element.disabled = true));
+    popupRef.classList.remove('hide');
+};
+
+const winFunction = (letter) => {
+    disableButtons();
+    //to do
+};
+
 const winChecker = () => {
-    //check if there is a winner
+    for (let i of winningPattern) {
+        let [element1, element2, element3] = [
+            btnRef[i[0]].innerText, 
+            btnRef[i[1]].innerText, 
+            btnRef[i[2]].innerText,
+        ];
+
+        if (element1 != '' && element2 != '' && element3 != '') {
+            if (element1 === element2 && element2 === element3) {
+                winFunction(element1);
+            }
+        }
+    }
 };
 
 btnRef.forEach((element) => {
@@ -34,7 +56,7 @@ btnRef.forEach((element) => {
             element.disabled = true;
         }
 
-        count++;
+        count += 1;
 
         if (count === 9) {
             //its a draw
