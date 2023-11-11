@@ -23,9 +23,27 @@ const disableButtons = () => {
     popupRef.classList.remove('hide');
 };
 
+const enableButtons = () => {
+    btnRef.forEach((element) => {
+        element.innerText = '';
+        element.disabled = false;
+    });
+
+    popupRef.classList.add('hide');
+};
+
+newGameBtn.addEventListener('click', () => {
+    count = 0;
+    enableButtons();
+});
+
+restartBtn.addEventListener('click', () => {
+    count = 0;
+    enableButtons();
+});
+
 const winFunction = (letter) => {
     disableButtons();
-    //to do
 };
 
 const winChecker = () => {
