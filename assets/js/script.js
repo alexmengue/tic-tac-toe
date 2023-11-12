@@ -44,6 +44,12 @@ restartBtn.addEventListener('click', () => {
 
 const winFunction = (letter) => {
     disableButtons();
+
+    if (letter === 'X') {
+        msgRef.innerHTML = '&#X1F389; <br> "X" wins';
+    } else {
+        msgRef.innerHTML = '&#X1F389; <br> "O" wins';
+    }
 };
 
 const winChecker = () => {
