@@ -52,6 +52,11 @@ const winFunction = (letter) => {
     }
 };
 
+const drawFunction = () => {
+    disableButtons();
+    msgRef.innerHTML = '&#X1F60E; <br> It is a draw';
+};
+
 const winChecker = () => {
     for (let i of winningPattern) {
         let [element1, element2, element3] = [
@@ -83,7 +88,7 @@ btnRef.forEach((element) => {
         count += 1;
 
         if (count === 9) {
-            //its a draw
+            drawFunction();
         }
 
         winChecker();
