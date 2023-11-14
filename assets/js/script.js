@@ -94,3 +94,5 @@ btnRef.forEach((element) => {
         winChecker();
     });
 });
+
+window.onload = enableButtons();
